@@ -16,6 +16,20 @@ const config: webpack.Configuration = {
 
   module: {
     rules: [
+      {
+        test: /\.(js|ts|tsx)$/,
+        enforce: 'pre',
+        use: [
+          {
+            options: {
+              eslintPath: require.resolve('eslint'),
+              emitWarning: true,
+            },
+            loader: require.resolve('eslint-loader')
+          }
+        ],
+        exclude: /node_modules/
+      },
       // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
       { test: /\.tsx?$/, loader: 'awesome-typescript-loader' },
       ...rules

@@ -1,5 +1,5 @@
-import * as React from 'react';
+import * as React from 'react'
 
 export default function App() {
-  return <h1>Hello React Typescript!</h1>;
+  return <h1>Hello React Typescript!</h1>
 }
