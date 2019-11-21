@@ -1,4 +1,4 @@
-import { RuleSetRule } from 'webpack';
+import { RuleSetRule } from 'webpack'
 
 export const rules: Array<RuleSetRule> = [
   {
@@ -7,7 +7,16 @@ export const rules: Array<RuleSetRule> = [
   },
   {
     test: /\.(js|ts|tsx)$/,
-    use: [ 'source-map-loader' ],
-    enforce: 'pre'
+    enforce: 'pre',
+    use: [
+      {
+        options: {
+          eslintPath: require.resolve('eslint'),
+          emitWarning: true
+        },
+        loader: require.resolve('eslint-loader')
+      }
+    ],
+    exclude: /node_modules/
   }
 ]
