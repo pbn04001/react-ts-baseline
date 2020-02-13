@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --open --config ./build/webpack.dev.ts",
     "build": "webpack --mode production --config ./build/webpack.prod.ts",
-    "lint": "tsc --noEmit && eslint './src/*.{js,ts,tsx}' --quiet --fix"
+    "lint": "tsc --noEmit && eslint './src/**/*.{js,ts,tsx}' --quiet --fix"
   },
   "keywords": [],
   "author": "",
