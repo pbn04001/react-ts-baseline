@@ -1,5 +1,10 @@
-import * as React from 'react'
+import React from 'react'
 
 export default function Home() {
-  return <h1>Home</h1>
+  return (
+    <div className="home">
+      <h1>Home</h1>
+      This is my homepage with stuff and things
+    </div>
+  )
 }
