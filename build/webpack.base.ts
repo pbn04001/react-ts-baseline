@@ -30,4 +30,27 @@ export const rules: Array<RuleSetRule> = [
       'sass-loader',
     ],
   },
+  {
+    test: /\.svg$/,
+    include: [
+      /src(\/|\\)assets/,
+    ],
+    use: [
+      { loader: 'svg-sprite-loader' },
+      {
+        loader: 'svgo-loader',
+        options: {
+          plugins: [
+            { removeTitle: false },
+          ]
+        }
+      },
+      { loader: 'svgo-loader' },
+    ]
+  }, {
+    // SVG File Loader (for css/background urls)
+    test: /\.svg$/,
+    include: /src(\/|\\)assets(\/|\\)images/,
+    loader : 'url-loader'
+  }
 ]
