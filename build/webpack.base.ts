@@ -12,7 +12,8 @@ export const rules: Array<RuleSetRule> = [
       {
         options: {
           eslintPath: require.resolve('eslint'),
-          emitWarning: true
+          emitWarning: true,
+          fix: true,
         },
         loader: require.resolve('eslint-loader')
       }
