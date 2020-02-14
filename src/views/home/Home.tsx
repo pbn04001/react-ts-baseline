@@ -13,7 +13,6 @@ export default function Home() {
       <div className="home__body">
         This is my homepage with stuff and things
         {test?.something ?? 'Yes'}
-
         <Svg name="twitter" />
       </div>
     </div>
